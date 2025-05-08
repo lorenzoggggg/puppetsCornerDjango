@@ -1,0 +1,156 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Puppet's corner</title>
+    <link rel="icon" href="assets/images/icon.PNG">
+
+    <link rel="stylesheet" href="./webcomicStyle.css" />
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <img src="assets/images/leafLeft.png" id="leafLeft">
+    <img src="assets/images/leafRight.png" id="leafRight">
+    <header id="header">
+        <img src="assets/images/floatinglogo.GIF" id="logoFloat" onclick="logoClick()">
+    </header>
+    <nav id="navBar">
+        <div class="image-container">
+            <a href="./aboutmeIndex.html">
+                <img src="assets/images/aboutme.PNG" alt="Button 1">
+            </a>
+            <a href="https://puppetizer.bigcartel.com/">
+                <img src="assets/images/shop.PNG" alt="Button 2">
+            </a>
+            <a href="./webcomicIndex.html">
+                <img src="assets/images/webcomic.PNG" alt="Button 3">
+            </a>
+             <a href="./portfolioIndex.html">
+                <img src="assets/images/portfolio.PNG" alt="Button 4">
+            </a>
+             <a href="./linksIndex.html">
+                <img src="assets/images/links.PNG" alt="Button 5">
+            </a>
+        </div>
+    <main>
+        <div id="gifContainer">
+            <img src="assets/gifs/measacat.gif" id="gif1">
+            <img src="assets/gifs/buttondecor_shop.gif" id="gif2">
+            <img src="assets/gifs/buttondecor_webcomics.gif" id="gif3">
+            <img src="assets/gifs/buttondecor_portfolio.gif" id="gif4">
+            <img src="assets/gifs/buttondecor_links.gif" id="gif5">
+        </div>
+        <audio id="meow" src="./assets/audio/meow.mp3" preload="auto"></audio>
+        <audio id="postMeow" src="./assets/audio/mario-meow.mp3" preload="auto"></audio>
+        <audio id="grin" src="./assets/audio/grin.mp3" preload="auto"></audio>
+        <audio id="pouik" src="./assets/audio/pouik.mp3" preload="auto"></audio>
+        <img src="assets/images/sleepymona.GIF" id="mona" onclick="meowClick()">
+        <img src="assets/gifs/favorite1.gif" id="fav">
+        <img src="assets/gifs/bar_24.gif" id="flowerBar">
+        <songs>
+            <audio id="melty" src="assets/music/Melty Blood Good Morning One Scene.mp3" preload="auto"></audio>
+            <audio id="pulsewidth" src="assets/music/Pulsewidth.mp3" preload="auto"></audio>
+            <audio id="digeridoo" src="assets/music/Digeridoo.mp3" preload="auto"></audio>
+            <audio id="sniping" src="assets/music/Twilight Sniping.mp3" preload="auto"></audio>
+            <audio id="speedway" src="assets/music/Stardust Speedway B mix.mp3" preload="auto"></audio>
+            <audio id="chris" src="assets/music/chris.mp3" preload="auto"></audio>
+            <audio id="poji" src="assets/music/Serani Poji - spiral da-hi_ [g0kYskMOgKE].mp3" preload="auto"></audio>
+            <audio id="ape" src="assets/music/カッチンコールたいりく Freeze Continent.mp3" preload="auto"></audio>
+            <audio id="pikmin" src="assets/music/Pikmin - The Forest of Hope.mp3" preload="auto"></audio>
+            <audio id="heart" src="assets/music/[風のクロノア] Klonoa_ Door To Phantomile OST ᴴᴰ Untamed Heart.mp3" preload="auto"></audio>
+            <audio id="pullasoft" src="assets/music/Pilotredsky - Pullasoft.mp3" preload="auto"></audio>
+        </songs>
+        <leftwindows id="leftwindows">
+            <img src="assets/images/window3.PNG" id="player">
+            <img src="assets/mediaPlayer/mediaplayer_backdrop.png" id="playing">
+            <img src="assets/mediaPlayer/mediaplayer_shine.png" id="mediaShine">
+            <img src="assets/gifs/notasindex.gif" id="notes">
+            <img src="assets/images/window1.PNG" id="playlist">
+            <img src="assets/mediaPlayer/mediaplayer_progressbarback.png" id="progressBack">
+            <img src="assets/mediaPlayer/mediaplayer_progressfront.png" id="progressFront">
+            <img src="assets/mediaPlayer/mediaplayer_back.gif" id="playBack" onclick="previousSong()">
+            <img src="assets/mediaPlayer/mediaplayer_next.gif" id="playNext" onclick="nextSong()">
+            <img src="assets/mediaPlayer/mediaplayer_play.png" id="play" onclick="togglePlayPause()">
+            <img src="assets/images/pulswidth.jpg" id="trackPic">
+            <img src="assets/gifs/djmaicon.gif" id="djmaicon">
+            <img src="assets/mediaPlayer/mediaplayer1.svg" id="kitty" onclick="kitty1Click()">
+            <div id="volumeSlider">
+                <input type="range" min="0" max="100" value="50" id="volume">
+            </div>
+            <div id="tracks">
+                <p id="song1" onclick="song1Click()">1. Aphex Twin - Pulsewidth</p>
+                <p id="song2" onclick="song2Click()">2. Serani Poji - Spiral Da-Hi!</p>
+                <p id="song3" onclick="song3Click()">3. Ape Escape 3 - Freeze<br>Continent</p>
+                <p id="song4" onclick="song4Click()">4. Pikmin - The Forest of Hope</p>
+                <p id="song5" onclick="song5Click()">5. Metal Gear Solid 2 - Twilight Sniping</p>
+                <p id="song6" onclick="song6Click()">6. Klonoa - Untamed Heart</p>
+            </div>
+        </leftwindows>
+        <p id="ur">You are the</p>
+        <p id="vstr">visitor!</p>
+        <div class="counter">
+            <!-- FC2 Counter  Starts here -->
+            <script language="javascript" type="text/javascript" src="//counter1.fc2.com/counter.php?id=89510870"></script>
+            <noscript><img src="//counter1.fc2.com/counter_img.php?id=89510870" /></noscript>
+            <!-- FC2 Counter  Ends here -->
+        </div>
+        <div class="carousel-wrapper">
+            <div id="buttonBanner">
+                <a href="https://www.google.com/search?client=firefox-b-d&sca_esv=fd2f423473d1beed&sxsrf=AHTn8zrS5WE-NDEnnQXliyyz1PUoIwOSJg:1739411198385&q=gay+mario&udm=2&fbs=ABzOT_CWdhQLP1FcmU5B0fn3xuWpA-dk4wpBWOGsoR7DG5zJBs5KbvfUChveCKqCmofFTOnfGzQ2XbHaUt9shq6uRI1WUeMAK4lCkDgWFq8aSIloOohF5n4niNaeGAn3ZqPN6llZj88Eq0uvOuCwtPR0XYZjeGdQk679L-p9tIeeKzqGGumUeAYoo76UynqU89Liytb_hoPUISQkoD_KDc8FwfCrzZ_g5A&sa=X&ved=2ahUKEwjOmuTUw7-LAxUO4zgGHQMxBNEQtKgLegQIDxAB&biw=1920&bih=927&dpr=1">
+                    <img src="assets/images/button1.gif" class="carousel-button">
+                </a>
+                <a href="https://youtu.be/6gg1ehnDoY8?si=K6XFopqOHObEM_gu">
+                    <img src="assets/images/button2.gif" class="carousel-button">
+                </a>
+                <a href="https://www.youtube.com/watch?v=OqnAbpQHH7c">
+                    <img src="assets/images/button4.gif" class="carousel-button">
+                </a>
+                <a href="http://riceballman.fc2web.com/">
+                    <img src="assets/images/onigiri.gif" class="carousel-button">
+                </a>
+                <a href="https://web.archive.org/web/20220530052733/http://matsucon.net/">
+                    <img src="assets/images/matsucon.gif" class="carousel-button">
+                </a>
+                <a href="https://www.google.com/search?client=firefox-b-d&sca_esv=fd2f423473d1beed&sxsrf=AHTn8zrS5WE-NDEnnQXliyyz1PUoIwOSJg:1739411198385&q=gay+mario&udm=2&fbs=ABzOT_CWdhQLP1FcmU5B0fn3xuWpA-dk4wpBWOGsoR7DG5zJBs5KbvfUChveCKqCmofFTOnfGzQ2XbHaUt9shq6uRI1WUeMAK4lCkDgWFq8aSIloOohF5n4niNaeGAn3ZqPN6llZj88Eq0uvOuCwtPR0XYZjeGdQk679L-p9tIeeKzqGGumUeAYoo76UynqU89Liytb_hoPUISQkoD_KDc8FwfCrzZ_g5A&sa=X&ved=2ahUKEwjOmuTUw7-LAxUO4zgGHQMxBNEQtKgLegQIDxAB&biw=1920&bih=927&dpr=1">
+                    <img src="assets/images/button1.gif" class="carousel-button">
+                </a>
+                <a href="https://youtu.be/6gg1ehnDoY8?si=K6XFopqOHObEM_gu">
+                    <img src="assets/images/button2.gif" class="carousel-button">
+                </a>
+                <a href="https://www.youtube.com/watch?v=OqnAbpQHH7c">
+                    <img src="assets/images/button4.gif" class="carousel-button">
+                </a>
+                <a href="http://riceballman.fc2web.com/">
+                    <img src="assets/images/onigiri.gif" class="carousel-button">
+                </a>
+                <a href="https://web.archive.org/web/20220530052733/http://matsucon.net/">
+                    <img src="assets/images/matsucon.gif" class="carousel-button">
+                </a>
+                <a href="https://www.google.com/search?client=firefox-b-d&sca_esv=fd2f423473d1beed&sxsrf=AHTn8zrS5WE-NDEnnQXliyyz1PUoIwOSJg:1739411198385&q=gay+mario&udm=2&fbs=ABzOT_CWdhQLP1FcmU5B0fn3xuWpA-dk4wpBWOGsoR7DG5zJBs5KbvfUChveCKqCmofFTOnfGzQ2XbHaUt9shq6uRI1WUeMAK4lCkDgWFq8aSIloOohF5n4niNaeGAn3ZqPN6llZj88Eq0uvOuCwtPR0XYZjeGdQk679L-p9tIeeKzqGGumUeAYoo76UynqU89Liytb_hoPUISQkoD_KDc8FwfCrzZ_g5A&sa=X&ved=2ahUKEwjOmuTUw7-LAxUO4zgGHQMxBNEQtKgLegQIDxAB&biw=1920&bih=927&dpr=1">
+                    <img src="assets/images/button1.gif" class="carousel-button">
+                </a>
+                <a href="https://youtu.be/6gg1ehnDoY8?si=K6XFopqOHObEM_gu">
+                    <img src="assets/images/button2.gif" class="carousel-button">
+                </a>
+                <a href="https://www.youtube.com/watch?v=OqnAbpQHH7c">
+                    <img src="assets/images/button4.gif" class="carousel-button">
+                </a>
+                <a href="http://riceballman.fc2web.com/">
+                    <img src="assets/images/onigiri.gif" class="carousel-button">
+                </a>
+                <a href="https://web.archive.org/web/20220530052733/http://matsucon.net/">
+                    <img src="assets/images/matsucon.gif" class="carousel-button">
+                </a>
+            </div>
+        </div>
+    </main>
+    <script src="./webcomicjs.js"></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Puppet's corner</title>
+    <link rel="icon" href="assets/images/icon.PNG">
+
+    <link rel="stylesheet" href="./catStyle.css" />
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header id="header">
+        <img src="assets/images/floatinglogo.GIF" id="logoFloat" onclick="logoClick()">
+    </header>
+    <nav id="navBar">
+        <div class="image-container">
+            <a href="https://www.neocities.com">
+                <img src="assets/images/aboutme.PNG" alt="Button 1">
+            </a>
+            <a href="https://www.neocities.com">
+                <img src="assets/images/shop.PNG" alt="Button 2">
+            </a>
+            <a href="https://www.neocities.com">
+                <img src="assets/images/webcomic.PNG" alt="Button 3">
+            </a>
+             <a href="https://www.neocities.com">
+                <img src="assets/images/portfolio.PNG" alt="Button 4">
+            </a>
+             <a href="https://www.neocities.com">
+                <img src="assets/images/links.PNG" alt="Button 5">
+            </a>
+        </div>
+    </nav>
+    <main>
+        <audio id="meow" src="./assets/audio/meow.mp3" preload="auto"></audio>
+        <img src="assets/images/sleepymona.GIF" id="mona" onclick="meowClick()">
+        <div id="canvasContainer">
+            <canvas id="canvas" width="800" height="500" style="background-color: rgb(207, 240, 248);"></canvas>
+        </div>
+    </main>
+    <script src="./catJs.js"></script>
+</body>

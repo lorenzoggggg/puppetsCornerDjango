@@ -1,0 +1,71 @@
+html {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    background-image: url("assets/images/background.PNG");
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-x: hidden;
+}
+
+main {
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    max-width: 1500px;
+    min-height: 720px;
+    background-color: #859355;
+    background-image: url("assets/images/greenbg2.JPG");
+    background-size: cover;
+    border-radius: 0.5em;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#logoFloat {
+    margin-left: auto;
+    margin-right: auto;
+    width: 1000px;
+    animation: logoSpin 1s ease-in-out forwards;
+}
+
+.image-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 10%;
+}
+
+.image-container a {
+    display: inline-flex;
+    margin: 0 3px;
+    padding: 0;
+    text-decoration: none;
+}
+
+.image-container img:hover {
+    box-shadow: 0 0 10px 5px #ffdede,
+                0 0 10px 5px #ff008a,
+                5px 5px 5px #ff0000;
+    cursor: pointer; 
+}
+
+#mona {
+    position: relative;
+    margin-top: -5.5%;
+    margin-left: -4%;
+}
+
+#canvasContainer {
+    display: flex;
+    justify-content: center;
+}
+
+@keyframes logoSpin {
+    0% { opacity: 0; transform: rotate(180deg); scale: 0.5;}
+    100% { opacity: 1; transform: rotate(0deg); scale: 1}
+}

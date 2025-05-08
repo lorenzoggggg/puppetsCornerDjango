@@ -1,0 +1,170 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Puppet's corner</title>
+    <link rel="icon" href="{% static 'assets/images/icon.PNG' %}">
+
+    <link rel="stylesheet" href="{% static 'indexStyle.css' %}">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <img src="{% static 'assets/images/leafLeft.png' %}" id="leafLeft">
+    <img src="{% static 'assets/images/leafRight.png' %}" id="leafRight">
+    <header id="header">
+        <img src="{% static 'assets/images/floatinglogo.GIF' %}" id="logoFloat" onclick="logoClick()">
+    </header>
+    <nav id="navBar">
+        <div class="image-container">
+            <a href="./aboutmeIndex.html">
+                <img src="{% static 'assets/images/aboutme.PNG' %}" alt="Button 1">
+            </a>
+            <a href="https://puppetizer.bigcartel.com/">
+                <img src="{% static 'assets/images/shop.PNG' %}" alt="Button 2">
+            </a>
+            <a href="./webcomicIndex.html">
+                <img src="{% static 'assets/images/webcomic.PNG' %}" alt="Button 3">
+            </a>
+            <a href="./portfolioIndex.html">
+                <img src="{% static 'assets/images/portfolio.PNG' %}" alt="Button 4">
+            </a>
+            <a href="./linksIndex.html">
+                <img src="{% static 'assets/images/links.PNG' %}" alt="Button 5">
+            </a>
+        </div>
+    </nav>
+    <main>
+        <div id="gifContainer">
+            <img src="{% static 'assets/gifs/measacat.gif' %}" id="gif1">
+            <img src="{% static 'assets/gifs/buttondecor_shop.gif' %}" id="gif2">
+            <img src="{% static 'assets/gifs/buttondecor_webcomics.gif' %}" id="gif3">
+            <img src="{% static 'assets/gifs/buttondecor_portfolio.gif' %}" id="gif4">
+            <img src="{% static 'assets/gifs/buttondecor_links.gif' %}" id="gif5">
+        </div>
+
+        <audio id="meow" src="{% static 'assets/audio/meow.mp3' %}" preload="auto"></audio>
+        <audio id="postMeow" src="{% static 'assets/audio/mario-meow.mp3' %}" preload="auto"></audio>
+        <audio id="grin" src="{% static 'assets/audio/grin.mp3' %}" preload="auto"></audio>
+        <audio id="pouik" src="{% static 'assets/audio/pouik.mp3' %}" preload="auto"></audio>
+
+        <img src="{% static 'assets/images/sleepymona.GIF' %}" id="mona" onclick="meowClick()">
+        <img src="{% static 'assets/gifs/favorite1.gif' %}" id="fav">
+        <img src="{% static 'assets/gifs/bar_24.gif' %}" id="flowerBar">
+
+        <div id="songs">
+            <audio id="melty" src="{% static 'assets/music/Melty Blood Good Morning One Scene.mp3' %}" preload="auto"></audio>
+            <audio id="pulsewidth" src="{% static 'assets/music/Pulsewidth.mp3' %}" preload="auto"></audio>
+            <audio id="digeridoo" src="{% static 'assets/music/Digeridoo.mp3' %}" preload="auto"></audio>
+            <audio id="sniping" src="{% static 'assets/music/Twilight Sniping.mp3' %}" preload="auto"></audio>
+            <audio id="speedway" src="{% static 'assets/music/Stardust Speedway B mix.mp3' %}" preload="auto"></audio>
+            <audio id="chris" src="{% static 'assets/music/chris.mp3' %}" preload="auto"></audio>
+            <audio id="poji" src="{% static 'assets/music/Serani Poji - spiral da-hi_ [g0kYskMOgKE].mp3' %}" preload="auto"></audio>
+            <audio id="ape" src="{% static 'assets/music/カッチンコールたいりく Freeze Continent.mp3' %}" preload="auto"></audio>
+            <audio id="pikmin" src="{% static 'assets/music/Pikmin - The Forest of Hope.mp3' %}" preload="auto"></audio>
+            <audio id="heart" src="{% static 'assets/music/[風のクロノア] Klonoa_ Door To Phantomile OST ᴴᴰ Untamed Heart.mp3' %}" preload="auto"></audio>
+        </div>
+
+        <div id="leftwindows">
+            <img src="{% static 'assets/images/window3.PNG' %}" id="player">
+            <img src="{% static 'assets/mediaPlayer/mediaplayer_backdrop.png' %}" id="playing">
+            <img src="{% static 'assets/mediaPlayer/mediaplayer_shine.png' %}" id="mediaShine">
+            <img src="{% static 'assets/gifs/notasindex.gif' %}" id="notes">
+            <img src="{% static 'assets/images/window1.PNG' %}" id="playlist">
+            <img src="{% static 'assets/mediaPlayer/mediaplayer_progressbarback.png' %}" id="progressBack">
+            <img src="{% static 'assets/mediaPlayer/mediaplayer_progressfront.png' %}" id="progressFront">
+            <img src="{% static 'assets/mediaPlayer/mediaplayer_back.gif' %}" id="playBack" onclick="previousSong()">
+            <img src="{% static 'assets/mediaPlayer/mediaplayer_next.gif' %}" id="playNext" onclick="nextSong()">
+            <img id="play"
+                src="{% static 'assets/mediaPlayer/mediaplayer_play.png' %}"
+                data-play-src="{% static 'assets/mediaPlayer/mediaplayer_play.png' %}"
+                data-pause-src="{% static 'assets/mediaPlayer/mediaplayer_pause.png' %}"
+                onclick="togglePlayPause()" />
+                <img
+                src="{% static 'assets/images/pulswidth.jpg' %}"
+                    id="trackPic"
+                    data-pic-pulsewidth="{% static 'assets/images/pulswidth.jpg' %}"
+                    data-pic-poji="{% static 'assets/images/swaganime.jpg' %}"
+                    data-pic-ape="{% static 'assets/images/apeEscape.jpg' %}"
+                    data-pic-pikmin="{% static 'assets/images/pikmin.jpg' %}"
+                    data-pic-sniping="{% static 'assets/images/raiden.jpg' %}"
+                    data-pic-heart="{% static 'assets/images/klonoa.png' %}"
+                />
+            <img src="{% static 'assets/gifs/djmaicon.gif' %}" id="djmaicon">
+            <img src="{% static 'assets/mediaPlayer/mediaplayer1.svg' %}" id="kitty" onclick="kitty1Click()">
+            <div id="volumeSlider">
+                <input type="range" min="0" max="100" value="50" id="volume">
+            </div>
+            <div id="tracks">
+                <p id="song1" onclick="song1Click()">1. Aphex Twin - Pulsewidth</p>
+                <p id="song2" onclick="song2Click()">2. Serani Poji - Spiral Da-Hi!</p>
+                <p id="song3" onclick="song3Click()">3. Ape Escape 3 - Freeze<br>Continent</p>
+                <p id="song4" onclick="song4Click()">4. Pikmin - The Forest of Hope</p>
+                <p id="song5" onclick="song5Click()">5. Metal Gear Solid 2 - Twilight Sniping</p>
+                <p id="song6" onclick="song6Click()">6. Klonoa - Untamed Heart</p>
+            </div>
+        </div>
+
+        <div id="bookContainer">
+            <img src="{% static 'assets/images/window1.PNG' %}" id="guestbook">
+            <img src="{% static 'assets/gifs/whitefuzzbox.png' %}" id="fuzzBox">
+            <img src="{% static 'assets/gifs/guestbook_clr.gif' %}" id="bookTitle">
+            <audio id="yahoo" src="{% static 'assets/audio/webkinz yoohoo.mp3' %}" preload="auto"></audio>
+            <img src="{% static 'assets/images/himeow.GIF' %}" id="wave" onclick="yahooClick()">
+            <img src="{% static 'assets/guestbook/catbook.svg' %}" id="kitty2" onclick="kitty2Click()">
+            <input type="text" id="name" placeholder="what's your nyame??"><br>
+            <textarea id="message" placeholder="and your message to the world..."></textarea>
+            <img src="{% static 'assets/gifs/catMail.gif' %}" id="post" onclick="postMessage()">
+            <div id="messagesDiv">
+                <ul id="messageList">
+                    {% for msg in messages %}
+                        <li><strong>{{ msg.name }}</strong> ({{ msg.timestamp|date:"Y-m-d H:i" }}): {{ msg.message }}</li>
+                    {% empty %}
+                        <li>No messages yet.</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+
+        <div id="maintxt">
+            <p id="hithere">Hi there!!!!!</p>
+            <p id="intro">I'm puppet/puppetizer/pupp3t1z3r, an artist that loves outdated memes and cats! ! !<br/>welcome to my website! ! Have fun looking around!<br/>
+                Feel free to sign the guest book or introduce yourself! For any inquiries go to the links section at the top.<br/> 
+                Feel free to check out my webcomics and my shop if you'd like to support the work I do! Enjoy your stay!</p>
+        </div>
+
+        <p id="ur">You are the</p>
+        <p id="vstr">visitor!</p>
+        <div class="counter">
+            <script language="javascript" type="text/javascript" src="//counter1.fc2.com/counter.php?id=89510870"></script>
+            <noscript><img src="//counter1.fc2.com/counter_img.php?id=89510870" /></noscript>
+        </div>
+
+        <div class="carousel-wrapper">
+            <div id="buttonBanner">
+                <a href="https://www.google.com/search?q=gay+mario">
+                    <img src="{% static 'assets/images/button1.gif' %}" class="carousel-button">
+                </a>
+                <a href="https://youtu.be/6gg1ehnDoY8">
+                    <img src="{% static 'assets/images/button2.gif' %}" class="carousel-button">
+                </a>
+                <a href="https://www.youtube.com/watch?v=OqnAbpQHH7c">
+                    <img src="{% static 'assets/images/button4.gif' %}" class="carousel-button">
+                </a>
+                <a href="http://riceballman.fc2web.com/">
+                    <img src="{% static 'assets/images/onigiri.gif' %}" class="carousel-button">
+                </a>
+                <a href="https://web.archive.org/web/20220530052733/http://matsucon.net/">
+                    <img src="{% static 'assets/images/matsucon.gif' %}" class="carousel-button">
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <script src="{% static 'indexjs.js' %}"></script>
+</body>
+</html>
