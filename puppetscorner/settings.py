@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -139,3 +140,18 @@ STATICFILES_DIRS = [
 
 # Used in production (when running `collectstatic`)
 STATIC_ROOT = BASE_DIR / "staticfiles"
+
+DEBUG = os.environ.get('DEBUG', 'False') == 'True'
+
+SECRET_KEY = os.environ.get('SECRET_KEY', 'your-dev-key')
+
+ALLOWED_HOSTS = ['your-service-name.onrender.com']
+
+# Database (Render gives you DATABASE_URL)
+import dj_database_url
+DATABASES = {
+    'default': dj_database_url.config(conn_max_age=600, ssl_require=True)
+}
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_URL = '/static/'

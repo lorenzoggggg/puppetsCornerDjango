@@ -1,19 +1,16 @@
-// Declare global variables safely
 let currentSongIndex = 0;
 let currentVolume = 0.5;
 
 const songs = ["pulsewidth", "poji", "ape", "pikmin", "sniping", "heart"];
 
 document.addEventListener("DOMContentLoaded", function () {
-    // Initial highlight
+
     document.getElementById("song1").style.color = "purple";
 
-    // Initialize volume
     const volumeSlider = document.getElementById("volume");
     currentVolume = (volumeSlider.value / volumeSlider.max) * 0.5;
     document.getElementById(songs[currentSongIndex]).volume = currentVolume;
 
-    // Marquee banner animation
     const banner = document.getElementById("buttonBanner");
     banner.innerHTML += banner.innerHTML;
 
@@ -30,14 +27,12 @@ document.addEventListener("DOMContentLoaded", function () {
     moveBanner();
 });
 
-// Volume slider handler
 document.getElementById("volume").addEventListener("input", function () {
     const currentSong = document.getElementById(songs[currentSongIndex]);
     currentVolume = (this.value / this.max) * 0.5;
     currentSong.volume = currentVolume;
 });
 
-// Clear form fields on page load
 window.onload = function () {
     clearFields();
 };
@@ -47,14 +42,13 @@ function clearFields() {
     document.getElementById("message").value = "";
 }
 
-// Media control
 function togglePlayPause() {
     const playbtn = document.getElementById("play");
     const currentSong = document.getElementById(songs[currentSongIndex]);
 
     if (currentSong.paused) {
         currentSong.play();
-        playbtn.src = playbtn.dataset.pauseSrc; // See HTML note
+        playbtn.src = playbtn.dataset.pauseSrc;
     } else {
         currentSong.pause();
         playbtn.src = playbtn.dataset.playSrc;
@@ -91,7 +85,6 @@ function changeSong() {
 
     playbtn.src = playbtn.dataset.pauseSrc;
 
-    // Reset song name colors
     songElements.forEach(song => song.style.color = "#41389b");
 
     switch (songs[currentSongIndex]) {
@@ -131,7 +124,6 @@ function previousSong() {
     changeSong();
 }
 
-// Individual song buttons
 function song1Click() { currentSongIndex = 0; changeSong(); }
 function song2Click() { currentSongIndex = 1; changeSong(); }
 function song3Click() { currentSongIndex = 2; changeSong(); }
@@ -139,7 +131,6 @@ function song4Click() { currentSongIndex = 3; changeSong(); }
 function song5Click() { currentSongIndex = 4; changeSong(); }
 function song6Click() { currentSongIndex = 5; changeSong(); }
 
-// Audio buttons
 function yahooClick() {
     const yahoo = document.getElementById("yahoo");
     yahoo.volume = 0.5;

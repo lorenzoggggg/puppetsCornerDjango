@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: puppets-corner
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn puppetscorner.wsgi:application
+    envVars:
+      - key: DJANGO_SETTINGS_MODULE
+        value: backend.puppetscorner.settings
+      - key: SECRET_KEY
+        generateValue: true
+      - key: DEBUG
+        value: "False"
