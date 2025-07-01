@@ -51,13 +51,13 @@ header {
 
 #gifContainer {
     position: absolute;
-    height: 50px;
-    left: 12%;
-    top: -6%;
+    height: 80px;
+    left: 5%;
+    top: -8%;
     display: flex;
     align-items: center;
     justify-content: center;
-    column-gap: 80px;
+    column-gap: 120px;
     z-index: -1;
 }
 
@@ -80,7 +80,7 @@ header {
 
 .image-container img {
     max-width: 100%;
-    height: 40px;
+    height: 50px;
     display: block;
 }
 
@@ -95,7 +95,7 @@ header {
     width: 300px;
     height: auto;
     position: absolute;
-    top: 10%;
+    top: 3%;
     right: 102%;
     display: flex;
     flex-direction: column;
@@ -136,10 +136,10 @@ header {
 }
 
 #kitty2 {
-    height: 800px;
+    height: 420px;
     position: absolute;
-    top: 36%;
-    left: -45%;
+    top: 91.5%;
+    left: -20%;
     animation: windowBob 5.5s ease-in-out infinite;
 }
 
@@ -207,6 +207,61 @@ header {
     flex-direction: column;
     align-items: center;
     gap: 20px;
+}
+
+#statusContainer {
+    position: absolute;
+    left: 95%;
+    top: 65%;
+    width: 300px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+#statusList {
+    width: 100%;
+    position: absolute;
+    height: 205px;
+    width: 250px;
+    overflow-y: scroll;
+    top: 8%;
+    left: 5%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    font-family: 'runescape';
+    animation: windowBob 6s ease-in-out infinite;
+}
+
+#statusList ul {
+    list-style-type: none;
+    padding: 0;
+    font-family: 'runescape';
+}
+
+#statusList li {
+    padding: 5px;
+    border-bottom: 1px solid #ddd;
+    font-family: 'runescape';
+}
+
+#statusTitle {
+    position: absolute;
+    top: -1%;
+    left: 10%;
+    font-size: 20px;
+    font-family: 'runescape';
+    color: #ffff00;
+    animation: windowBob 6s ease-in-out infinite;
+    z-index: 10;
+}
+
+#statusWindow {
+    width: 100%;
+    animation: windowBob 6s ease-in-out infinite;
 }
 
 #player {
@@ -284,6 +339,16 @@ header {
     animation: windowBob 5s ease-in-out infinite;
 }
 
+#songTime {
+    position: absolute;
+    top: 31.5%;
+    left: 45%;
+    font-family: 'runescape';
+    font-size: 18px;
+    color: #ffff00;
+    animation: windowBob 5s ease-in-out infinite;
+}
+
 #kitty {
     height: 58%;
     position: absolute;
@@ -331,18 +396,77 @@ header {
     animation: windowBob 5s ease-in-out infinite;
 }*/
 
+#postContainer {
+    position: absolute;
+    top: 58%;
+    left: 6%;
+    width: 75%;
+    height: 400px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#post1 {
+    overflow: hidden;
+    height: 67%;
+    position: relative;
+    top: 15.5%;
+    left: -0.75%;
+}
+
+#post2 {
+    overflow: hidden;
+    height: 50.25%;
+    position: absolute;
+    top: 32%;
+    left: 28%;
+}
+
+#post3 {
+    overflow: hidden;
+    height: 50.25%;
+    position: absolute;
+    top: 32%;
+    left: 55%;
+}
+
+#post2Content{
+    max-width: 320px;
+    max-height: 400px;
+    margin: 0 auto;
+    transform: scale(0.66);
+    transform-origin: top left;
+}
+
+#post1Content,
+#post3Content {
+    max-width: 320px;
+    max-height: 400px;
+    margin: 0 auto;
+    transform: scale(0.70);
+    transform-origin: top left;
+}
+
+#boney {
+    position: absolute;
+    height: 30%;
+    top: 60.75%;
+    left: 67%;
+}
+
 #mona {
     position: relative;
     height: 120px;
-    margin-top: -5.8%;
-    margin-left: -4%;
+    margin-top: 129.75%;
+    margin-left: -5%;
 }
 
 #fav {
     position: absolute;
     height: 130px;
-    margin-top: -9.5%;
-    right: 1.5%;
+    margin-top: 127%;
+    right: 1%;
 }
 
 #flowerBar {
@@ -359,6 +483,64 @@ header {
     margin-left: -500%;
     align-items: center;
     padding-top: 15%;
+}
+
+#buttonDWNLD {
+    position: absolute;
+    width: 300px;
+    top: 88.5%;
+    left: 30%;
+}
+
+#dwnldBG {
+    position: relative;
+    width: 150%;
+    height: 150%;
+    left: -8%;
+}
+
+#pupbuttonDWNLD {
+    position: absolute;
+    top: 30px;
+    left: 99%;
+    transform: scale(1.50);
+}
+
+#dwnldTxt {
+    position: absolute;
+    font-family: 'runescape';
+    color: #be4e4e;
+    font-size: 30px;
+    top: -5px;
+}
+
+#dwnldTxt2 {
+    position: absolute;
+    font-family: 'runescape';
+    color: #be4e4e;
+    font-size: 20px;
+    top: 30px;
+}
+
+#boneyWalk {
+    position: absolute;
+    height: 70px;
+    top: 92.2%;
+    left: 21%;
+}
+
+#chimera {
+    position: absolute;
+    height: 100px;
+    top: 90.5%;
+    left: 13.5%;
+}
+
+#gang {
+    position: absolute;
+    height: 80px;
+    top: 91.7%;
+    right: 7%;
 }
 
 @font-face {
@@ -386,14 +568,14 @@ header {
     width: 95.5%;
     position: absolute;
     display: flex;
-    margin-top: 125%;
+    margin-top: 120%;
     margin-left: 2.3%;
 }
 
 #buttonBanner {
     display: flex;
     gap: 10px;
-    animation: carousel 5s linear infinite;
+    animation: carousel 10s linear infinite;
 }
 
 #volume {
@@ -423,24 +605,32 @@ header {
     font-family: 'runescape';
     color: #ffff00;
     font-size: 30px;
-    top: 87%;
+    top: 79.5%;
     left: 30.5%;
 }
-
 
 #vstr {
     position: absolute;
     font-family: 'runescape';
     color: #ffff00;
     font-size: 30px;
-    top: 87%;
+    top: 79.5%;
     left: 60.5%;
 }
 
 .counter {
     position: absolute;
-    top: 88.5%;
+    top: 81%;
     left: 44.1%;
+}
+
+.profile-img {
+    width: 32px;
+    height: 32px;
+    border-radius: 0;
+    object-fit: cover;
+    vertical-align: middle;
+    margin-right: 6px;
 }
 
 @keyframes logoSpin {

@@ -31,7 +31,7 @@ function kitty2Click() {
 }
 
 function logoClick() {
-    window.open("index.html", "_self");
+    window.open("/", "_self");
 }
 
 //function volumeChange() {

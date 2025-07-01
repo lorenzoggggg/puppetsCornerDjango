@@ -4,7 +4,6 @@ let currentVolume = 0.5;
 const songs = ["pulsewidth", "poji", "ape", "pikmin", "sniping", "heart"];
 
 document.addEventListener("DOMContentLoaded", function () {
-
     document.getElementById("song1").style.color = "purple";
 
     const volumeSlider = document.getElementById("volume");
@@ -12,6 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById(songs[currentSongIndex]).volume = currentVolume;
 
     const banner = document.getElementById("buttonBanner");
+    
     banner.innerHTML += banner.innerHTML;
 
     let offset = 0;
@@ -63,6 +63,29 @@ function pauseAllSongs() {
     });
 }
 
+function formatTime(seconds) {
+    if (isNaN(seconds)) return "0:00";
+    const min = Math.floor(seconds / 60);
+    const sec = Math.floor(seconds % 60);
+    return `${min}:${sec.toString().padStart(2, '0')}`;
+}
+
+function updateSongTimeDisplay() {
+    const currentSong = document.getElementById(songs[currentSongIndex]);
+    const songTime = document.getElementById("songTime");
+    if (!currentSong || !songTime) return;
+    songTime.textContent = `${formatTime(currentSong.currentTime)} / ${formatTime(currentSong.duration)}`;
+}
+
+songs.forEach(id => {
+    const audio = document.getElementById(id);
+    if (audio) {
+        audio.addEventListener('timeupdate', updateSongTimeDisplay);
+        audio.addEventListener('loadedmetadata', updateSongTimeDisplay);
+        audio.addEventListener('ended', updateSongTimeDisplay);
+    }
+});
+
 function changeSong() {
     pauseAllSongs();
 
@@ -112,6 +135,9 @@ function changeSong() {
             trackPic.src = trackPic.dataset.picPulsewidth;
             songElements[0].style.color = "purple";
     }
+
+    // Update the song time display immediately
+    updateSongTimeDisplay();
 }
 
 function nextSong() {
@@ -157,7 +183,7 @@ function kitty2Click() {
 }
 
 function logoClick() {
-    window.open("index.html", "_self");
+    window.open("/", "_self");
 }
 
 async function postMessage() {
@@ -210,9 +236,20 @@ async function postMessage() {
     }
 }
 
-function appendMessageToDOM({ name, message, timestamp }) {
-    const messageList = document.getElementById("messageList");  // Ensure this ID matches your HTML
-    const messageItem = document.createElement("li");  // Create a new list item
-    messageItem.innerHTML = `<strong>${name}</strong> (${timestamp}): ${message}`;  // Format the message
-    messageList.prepend(messageItem);  // Add the new message to the top of the list
+function appendMessageToDOM({ name, message, timestamp, profile_image_id }) {
+    const messageList = document.getElementById("messageList");
+    const messageItem = document.createElement("li");
+
+    const img = document.createElement("img");
+    img.src = `/static/assets/profile/profile${profile_image_id}.png`;
+    img.alt = "Profile";
+    img.className = "profile-img";
+
+    const content = document.createElement("span");
+    content.innerHTML = `<strong>${name}</strong> (${timestamp}): ${message}`;
+
+    messageItem.appendChild(img);
+    messageItem.appendChild(content);
+
+    messageList.prepend(messageItem);
 }
