@@ -14,7 +14,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Security
 SECRET_KEY = os.environ.get('SECRET_KEY', 'your-dev-key')
 DEBUG = os.environ.get('DEBUG', 'False') == 'True'
-ALLOWED_HOSTS = ['your-service-name.onrender.com', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['puppets-corner.onrender.com', 'localhost', '127.0.0.1']
 
 # Installed apps
 INSTALLED_APPS = [
@@ -24,7 +24,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
+    'rest_framework',
     'corsheaders',
     'guestMessages',
 ]
