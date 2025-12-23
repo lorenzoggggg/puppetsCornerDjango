@@ -11,10 +11,14 @@ from .serializers import MessageSerializer, StatusMessageSerializer
 
 def submit_message(request):
     if request.method == 'POST':
-        name = request.POST.get('name')
-        message = request.POST.get('message')
-        GuestMessage.objects.create(name=name, message=message)
-        return JsonResponse({'status': 'success'})
+        try:
+            data = json.loads(request.body)
+            name = data.get('name')
+            message = data.get('message')
+            GuestMessage.objects.create(name=name, message=message)
+            return JsonResponse({'status': 'success'})
+        except json.JSONDecodeError:
+            return JsonResponse({'error': 'Invalid JSON'}, status=400)
     return JsonResponse({'error': 'Invalid request'}, status=400)
 
 def message_list(request):
