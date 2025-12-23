@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: puppets-corner
+    env: python
+    buildCommand: pip install -r [requirements.txt](http://_vscodecontentref_/5) && python [manage.py](http://_vscodecontentref_/6) collectstatic --noinput
+    startCommand: gunicorn puppetscorner.wsgi:application --bind 0.0.0.0:$PORT
+    envVars:
+      - key: DJANGO_SETTINGS_MODULE
+        value: puppetscorner.settings
+      - key: SECRET_KEY
+        generateValue: true  # Render will generate a secure key
+      - key: DEBUG
+        value: false
+      - key: DATABASE_URL  # Will be set later when linking Postgres
