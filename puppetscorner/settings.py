@@ -14,7 +14,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Security
 SECRET_KEY = os.environ.get('SECRET_KEY', 'your-dev-key')
 DEBUG = os.environ.get('DEBUG', 'False') == 'True'
-ALLOWED_HOSTS = ['puppets-corner.onrender.com', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = [
+    "localhost",
+    "127.0.0.1",
+    ".onrender.com",
+]
+
+SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
 
 # Installed apps
 INSTALLED_APPS = [
@@ -47,6 +53,10 @@ CORS_ALLOW_ALL_ORIGINS = True
 
 # URL configuration
 ROOT_URLCONF = 'puppetscorner.urls'
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://puppetscorner.onrender.com",
+]
 
 # Templates
 TEMPLATES = [
@@ -99,3 +109,9 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 # Default primary key field type
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+DEBUG = False
+
+SECURE_SSL_REDIRECT = True
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
