@@ -15,10 +15,12 @@ def submit_message(request):
             data = json.loads(request.body)
             name = data.get('name')
             message = data.get('message')
-            GuestMessage.objects.create(name=name, message=message)
+            Message.objects.create(name=name, message=message)
             return JsonResponse({'status': 'success'})
         except json.JSONDecodeError:
             return JsonResponse({'error': 'Invalid JSON'}, status=400)
+        except Exception as e:
+            return JsonResponse({'error': str(e)}, status=500)
     return JsonResponse({'error': 'Invalid request'}, status=400)
 
 def message_list(request):
