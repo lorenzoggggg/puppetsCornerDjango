@@ -27,8 +27,8 @@ DEBUG = os.environ.get('DEBUG', 'False') == 'True'
 ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "").split(",")
 
 # For local development, uncomment the following lines and comment out the above:
-# DEBUG = True
-# ALLOWED_HOSTS = ['localhost', '127.0.0.1', '[::1]']
+#DEBUG = True
+#ALLOWED_HOSTS = ['localhost', '127.0.0.1', '[::1]']
 
 SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
 
@@ -127,9 +127,9 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # For local development, uncomment the following and comment out the above:
-# SECURE_SSL_REDIRECT = False
-# SESSION_COOKIE_SECURE = False
-# CSRF_COOKIE_SECURE = False
+#SECURE_SSL_REDIRECT = False
+#SESSION_COOKIE_SECURE = False
+#CSRF_COOKIE_SECURE = False
 
 SECURE_SSL_REDIRECT = True
 SESSION_COOKIE_SECURE = True
