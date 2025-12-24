@@ -118,11 +118,31 @@ header {
     left: 5%;
 }
 
+#pain {
+    position: absolute;
+    height: 328px;
+    width: 362px;
+    top: 42.75%;
+    left: 6%;
+    z-index: 1;
+    object-fit: fill;
+}
+
 #framedos {
     position: absolute;
     height: 350px;
     top: 42%;
     left: 43%;
+}
+
+#gamergear {
+    position: absolute;
+    height: 329px;
+    width: 533px;
+    top: 42.75%;
+    left: 44.5%;
+    z-index: 1;
+    overflow: hidden;
 }
 
 #bookContainer {
@@ -142,6 +162,7 @@ header {
     padding-left: 15%;
     padding-top: 33%;
     animation: windowBob 5.5s ease-in-out infinite;
+    z-index: 2;
 }
 
 #bookTitle {
@@ -150,6 +171,7 @@ header {
     top: 3%;
     left: -40px;
     animation: windowBob 5.5s ease-in-out infinite;
+    z-index: 3;
 }
 
 #fuzzBox {
@@ -159,6 +181,7 @@ header {
     top: 1%;
     left: -50px;
     animation: windowBob 5.5s ease-in-out infinite;
+    z-index: 3;
 }
 
 #wave {
@@ -167,6 +190,7 @@ header {
     position: absolute;
     left: 65%;
     animation: windowBob 5.5s ease-in-out infinite;
+    z-index: 3;
 }
 
 #kitty2 {
@@ -175,6 +199,7 @@ header {
     top: 92.5%;
     left: -15%;
     animation: windowBob 5.5s ease-in-out infinite;
+    z-index: 3;
 }
 
 #name {
@@ -184,6 +209,7 @@ header {
     top: 78%;
     left: -10%;
     animation: windowBob 5.5s ease-in-out infinite;
+    z-index: 3;
 }
 
 #message {
@@ -194,6 +220,7 @@ header {
     top: 83%;
     left: -10%;
     animation: windowBob 5.5s ease-in-out infinite;
+    z-index: 3;
 }
 
 #post {
@@ -202,6 +229,7 @@ header {
     top: 80%;
     left: 100%;
     animation: windowBob 5.5s ease-in-out infinite;
+    z-index: 3;
 }
 
 #messageList {
@@ -217,6 +245,7 @@ header {
     background-color: #f9f9f9;
     font-family: 'runescape';
     animation: windowBob 5.5s ease-in-out infinite;
+    z-index: 3;
 }
 
 #messageList ul {
@@ -317,6 +346,7 @@ header {
     left: 14%;
     width: 50%;
     animation: windowBob 5s ease-in-out infinite;
+    z-index: 3;
 }
 
 #mediaShine {
@@ -331,6 +361,7 @@ header {
     width: 90%;
     margin-top: 10px;
     animation: windowBob 4.5s ease-in-out infinite;
+    z-index: 2;
 }
 
 #progressBack {
@@ -413,6 +444,7 @@ header {
     font-size: 20px;
     color: #41389b;
     animation: windowBob 4.5s ease-in-out infinite;
+    z-index: 3;
 }
 
 #volumeSlider {
@@ -487,6 +519,7 @@ header {
     height: 30%;
     top: 60.75%;
     left: 67%;
+    z-index: 3;
 }
 
 #mona {
@@ -611,6 +644,7 @@ header {
     display: flex;
     gap: 10px;
     animation: carousel 10s linear infinite;
+    z-index: 4;
 }
 
 #volume {
