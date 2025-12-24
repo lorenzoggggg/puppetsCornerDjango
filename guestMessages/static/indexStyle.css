@@ -91,6 +91,40 @@ header {
     cursor: pointer; 
 }
 
+#catscroll {
+    height: 750px;
+    position: absolute;
+    top: -7.5%;
+    left: 13%;
+    z-index: 1;
+}
+
+#scrolltext {
+    position: absolute;
+    top: 12.75%;
+    left: 21%;
+    width: 560px;
+    height: 300px;
+    font-family: 'rainyhearts';
+    font-size: 24px;
+    color: #345972;
+    z-index: 2;
+}
+
+#frameuno {
+    position: absolute;
+    height: 350px;
+    top: 42%;
+    left: 5%;
+}
+
+#framedos {
+    position: absolute;
+    height: 350px;
+    top: 42%;
+    left: 43%;
+}
+
 #bookContainer {
     width: 300px;
     height: auto;
@@ -136,10 +170,10 @@ header {
 }
 
 #kitty2 {
-    height: 420px;
+    height: 300px;
     position: absolute;
-    top: 91.5%;
-    left: -20%;
+    top: 92.5%;
+    left: -15%;
     animation: windowBob 5.5s ease-in-out infinite;
 }
 
@@ -341,9 +375,9 @@ header {
 
 #songTime {
     position: absolute;
-    top: 31.5%;
+    top: 31%;
     left: 45%;
-    font-family: 'runescape';
+    font-family: 'rainyhearts';
     font-size: 18px;
     color: #ffff00;
     animation: windowBob 5s ease-in-out infinite;
@@ -472,7 +506,13 @@ header {
 #flowerBar {
     position: absolute;
     top: 0.5%;
-    left: 22%;
+    left: 2.5%;
+}
+
+#flowerBar2 {
+    position: absolute;
+    top: 0.5%;
+    left: 42.5%;
 }
 
 #maintxt {
@@ -541,11 +581,6 @@ header {
     height: 80px;
     top: 91.7%;
     right: 7%;
-}
-
-@font-face {
-    font-family: 'runescape';
-    src: url("assets/fonts/runescape.woff");
 }
 
 #hithere {
@@ -642,4 +677,35 @@ header {
     0% { transform: translateY(0); }
     50% { transform: translateY(-10px); }
     100% { transform: translateY(0); }
+}
+
+
+@font-face {
+    font-family: 'comicsans';
+    src: url('assets/fonts/COMICSANS.woff2') format('woff2'),
+         url('assets/fonts/COMICSANS.woff') format('woff'),
+         url('assets/fonts/COMICSANS.TTF') format('truetype');
+}
+
+@font-face {
+    font-family: 'mario64';
+    src: url('assets/fonts/Mario64.woff2') format('woff2'),
+         url('assets/fonts/Mario64.woff') format('woff'),
+         url('assets/fonts/Mario64.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'runescape';
+    src: url('assets/fonts/runescape.woff') format('woff'),
+         url('assets/fonts/runescape.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'pixel';
+    src:url('assets/fonts/pixelpoiiz.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'rainyhearts';
+    src:url('assets/fonts/rainyhearts.ttf') format('truetype');
 }
