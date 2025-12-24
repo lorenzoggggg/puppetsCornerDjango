@@ -26,7 +26,7 @@ class Message(models.Model):
 
     def save(self, *args, **kwargs):
         if self.profile_image_id is None:
-            self.profile_image_id = random.randint(1, 21)
+            self.profile_image_id = random.randint(1, 26)
         super().save(*args, **kwargs)
 
     def __str__(self):

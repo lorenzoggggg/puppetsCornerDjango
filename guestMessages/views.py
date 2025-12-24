@@ -9,14 +9,23 @@ import random
 from rest_framework import generics
 from .serializers import MessageSerializer, StatusMessageSerializer
 
+@csrf_exempt
 def submit_message(request):
     if request.method == 'POST':
         try:
             data = json.loads(request.body)
             name = data.get('name')
             message = data.get('message')
-            Message.objects.create(name=name, message=message)
-            return JsonResponse({'status': 'success'})
+            msg = Message.objects.create(name=name, message=message)
+            return JsonResponse({
+                'status': 'success',
+                'message_data': {
+                    'name': msg.name,
+                    'message': msg.message,
+                    'timestamp': msg.timestamp.strftime('%Y-%m-%d %H:%M:%S'),
+                    'profile_image_id': msg.profile_image_id
+                }
+            })
         except json.JSONDecodeError:
             return JsonResponse({'error': 'Invalid JSON'}, status=400)
         except Exception as e:
