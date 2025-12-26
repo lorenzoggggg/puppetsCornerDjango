@@ -32,6 +32,7 @@ header {
     position: absolute;
     margin-left: -1%;
     margin-top: -1%;
+    z-index: 4;
 }
 
 #leafRight {
@@ -39,11 +40,109 @@ header {
     position: absolute;
     margin-top: -1%;
     margin-left: 90%;
+    z-index: 4;
+}
+
+#navBar {
+    position: absolute;
+    width: 80%;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5;
+}
+
+#comsTxt, #shopTxt, #portTxt, #comicTxt, #linkTxt {
+    font-family: 'slapncrumbly';
+    font-size: 20px;
+    color: #ffffff;
+}
+
+#portTxt {
+    font-family: 'janyk';
+    font-size: 22px;
+    color: #ffffff;
+}
+
+#comsTxt {
+    position: absolute;
+    top: -10%;
+    left: 12%;
+}
+
+#shopTxt {
+    position: absolute;
+    top: -10%;
+    left: 31.5%;
+}
+
+#portTxt {
+    position: absolute;
+    top: -10%;
+    left: 46.25%;
+}
+
+#comicTxt {
+    position: absolute;
+    top: -10%;
+    left: 63.5%;
+}
+
+#linkTxt {
+    position: absolute;
+    top: -10%;
+    left: 81.5%;
+}
+
+#comsTxt:hover {
+    text-shadow: 0 0 10px #ffdede,
+                0 0 10px #904daf,
+                5px 5px 5px #ff7db3;
+    cursor: pointer; 
+    transform-origin: center;
+    transform: scale(1.2);
+}
+
+#shopTxt:hover {
+    text-shadow: 0 0 10px #ffdede,
+                0 0 10px #485aff,
+                5px 5px 5px #78cdff;
+    cursor: pointer; 
+    transform-origin: center;
+    transform: scale(1.2);
+}
+
+#portTxt:hover {
+    text-shadow: 0 0 10px #ffdede,
+                0 0 10px #e67635,
+                5px 5px 5px #ffd756;
+    cursor: pointer; 
+    transform-origin: center;
+    transform: scale(1.2);
+}
+
+#comicTxt:hover {
+    text-shadow: 0 0 10px #ffdede,
+                0 0 10px #3fff19,
+                5px 5px 5px #6dc5b6;
+    cursor: pointer; 
+    transform-origin: center;
+    transform: scale(1.2);
+}
+
+#linkTxt:hover {
+    text-shadow: 0 0 10px #ffdede,
+                0 0 10px #c43434,
+                5px 5px 5px #ff5b31;
+    cursor: pointer; 
+    transform-origin: center;
+    transform: scale(1.2);
 }
 
 #logoFloat {
     margin-left: auto;
     margin-right: auto;
+    margin-top: 5%;
     margin-bottom: 5%;
     width: 900px;
     animation: logoSpin 1s ease-in-out forwards;
@@ -94,7 +193,7 @@ header {
 #catscroll {
     height: 750px;
     position: absolute;
-    top: -7.5%;
+    top: -10%;
     left: 13%;
     z-index: 1;
 }
@@ -713,7 +812,6 @@ header {
     100% { transform: translateY(0); }
 }
 
-
 @font-face {
     font-family: 'comicsans';
     src: url('assets/fonts/COMICSANS.woff2') format('woff2'),
@@ -742,4 +840,14 @@ header {
 @font-face {
     font-family: 'rainyhearts';
     src:url('assets/fonts/rainyhearts.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'janyk';
+    src:url('assets/fonts/Janyk.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'slapncrumbly';
+    src:url('assets/fonts/SlapAndCrumbly.ttf') format('truetype');
 }

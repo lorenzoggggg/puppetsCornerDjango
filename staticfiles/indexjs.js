@@ -25,6 +25,15 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     moveBanner();
+
+    window.addEventListener('scroll', function() {
+        const navBar = document.getElementById('navBar');
+        if (window.scrollY > 0) {
+            navBar.style.position = 'fixed';
+        } else {
+            navBar.style.position = 'absolute';
+        }
+    });
 });
 
 document.getElementById("volume").addEventListener("input", function () {
