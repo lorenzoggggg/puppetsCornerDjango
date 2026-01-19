@@ -30,7 +30,7 @@ ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "").split(",")
 #DEBUG = True
 #ALLOWED_HOSTS = ['localhost', '127.0.0.1', '[::1]']
 
-SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
+#SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
 
 # Installed apps
 INSTALLED_APPS = [

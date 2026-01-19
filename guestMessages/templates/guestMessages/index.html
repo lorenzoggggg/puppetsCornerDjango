@@ -125,8 +125,6 @@
             <img src="{% static 'assets/mediaPlayer/mediaplayer_shine.png' %}" id="mediaShine">
             <img src="{% static 'assets/gifs/notasindex.gif' %}" id="notes">
             <img src="{% static 'assets/images/window1.PNG' %}" id="playlist">
-            <img src="{% static 'assets/mediaPlayer/mediaplayer_progressbarback.png' %}" id="progressBack">
-            <img src="{% static 'assets/mediaPlayer/mediaplayer_progressfront.png' %}" id="progressFront">
             <img src="{% static 'assets/mediaPlayer/mediaplayer_back.gif' %}" id="playBack" onclick="previousSong()">
             <img src="{% static 'assets/mediaPlayer/mediaplayer_next.gif' %}" id="playNext" onclick="nextSong()">
             <img id="play"
@@ -146,6 +144,9 @@
                 />
             <img src="{% static 'assets/gifs/djmaicon.gif' %}" id="djmaicon">
             <img src="{% static 'assets/mediaPlayer/mediaplayer1.svg' %}" id="kitty" onclick="kitty1Click()">
+            <div class="progbar">
+                <input type="range" min="0" max="100" value="0" id="progress">
+            </div>
             <h1 id="songTime">0:00</h1>
             <div id="volumeSlider">
                 <input type="range" min="0" max="100" value="50" id="volume">

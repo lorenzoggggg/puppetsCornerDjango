@@ -86,14 +86,44 @@ function updateSongTimeDisplay() {
     songTime.textContent = `${formatTime(currentSong.currentTime)} / ${formatTime(currentSong.duration)}`;
 }
 
+function updateProgressBar() {
+    const currentSong = document.getElementById(songs[currentSongIndex]);
+    const progressBar = document.getElementById("progress");
+    if (!currentSong || !progressBar) return;
+    
+    if (currentSong.duration > 0) {
+        progressBar.value = (currentSong.currentTime / currentSong.duration) * 100;
+    }
+}
+
+function initProgressBarSeek() {
+    const progressBar = document.getElementById("progress");
+    if (!progressBar) return;
+    
+    progressBar.addEventListener("input", function() {
+        const currentSong = document.getElementById(songs[currentSongIndex]);
+        if (currentSong && currentSong.duration > 0) {
+            currentSong.currentTime = (this.value / 100) * currentSong.duration;
+        }
+    });
+}
+
 songs.forEach(id => {
     const audio = document.getElementById(id);
     if (audio) {
-        audio.addEventListener('timeupdate', updateSongTimeDisplay);
-        audio.addEventListener('loadedmetadata', updateSongTimeDisplay);
+        audio.addEventListener('timeupdate', function() {
+            updateSongTimeDisplay();
+            updateProgressBar();
+        });
+        audio.addEventListener('loadedmetadata', function() {
+            updateSongTimeDisplay();
+            updateProgressBar();
+        });
         audio.addEventListener('ended', updateSongTimeDisplay);
     }
 });
+
+initProgressBarSeek();
 
 function changeSong() {
     pauseAllSongs();

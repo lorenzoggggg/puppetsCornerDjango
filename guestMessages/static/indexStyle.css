@@ -6,6 +6,7 @@ html {
     background-repeat: repeat;
     background-size: 319px 309px;
     overflow-x: hidden;
+    zoom: 0.75;
 }
 
 main {
@@ -53,37 +54,33 @@ header {
 }
 
 #comsTxt, #shopTxt, #portTxt, #comicTxt, #linkTxt {
+    position: absolute;
     font-family: 'slapncrumbly';
     font-size: 20px;
     color: #ffffff;
 }
 
 #comsTxt {
-    position: absolute;
     top: -10%;
     left: 12%;
 }
 
 #shopTxt {
-    position: absolute;
     top: -10%;
     left: 31.5%;
 }
 
 #portTxt {
-    position: absolute;
     top: -10%;
     left: 46.25%;
 }
 
 #comicTxt {
-    position: absolute;
     top: -10%;
     left: 63.5%;
 }
 
 #linkTxt {
-    position: absolute;
     top: -10%;
     left: 81.5%;
 }
@@ -194,7 +191,7 @@ header {
 
 #scrolltext {
     position: absolute;
-    top: 12.75%;
+    top: 10%;
     left: 21%;
     width: 560px;
     height: 300px;
@@ -457,19 +454,12 @@ header {
     z-index: 2;
 }
 
-#progressBack {
-    width: 50%;
-    position: absolute;
-    top: 36%;
-    right: 8%;
-    animation: windowBob 5s ease-in-out infinite;
-}
-
-#progressFront {
-    width: 47%;
+.progbar{
+    height: 15px;
+    width: 50px;
     position: absolute;
     top: 36.1%;
-    right: 9.75%;
+    right: 40%;
     animation: windowBob 5s ease-in-out infinite;
 }
 
