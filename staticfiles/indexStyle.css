@@ -68,6 +68,7 @@ header {
 #shopTxt {
     top: -10%;
     left: 31.5%;
+    text-decoration: none;
 }
 
 #portTxt {
@@ -196,7 +197,7 @@ header {
     width: 560px;
     height: 300px;
     font-family: 'rainyhearts';
-    font-size: 24px;
+    font-size: 27px;
     color: #345972;
     z-index: 2;
 }
@@ -455,30 +456,44 @@ header {
 }
 
 .progbar{
-    width:100%;
-    background:white;
-    height:25px;
+    position: absolute;
+    top: 36.1%;
+    right: 7%;
+    animation: windowBob 5s ease-in-out infinite;
 }
-.progrange{
-    width:0;
-    background:black;
-    height:25px;
+
+#progress {
+    position: relative;
+    height: 10px;
+    width: 150px;
+    background: #dddddd;
+    border-radius: 5px;
+    z-index: 2;
+}
+
+#progress::-webkit-slider-thumb {
+    width: 30px;
+    height: 30px;
+    background: url('assets/gifs/mc.gif');
+    background-size: cover;
+    border: none;
+}
+
+#progress::-moz-range-thumb {
+    width: 30px;
+    height: 30px;
+    background: url('assets/gifs/mc.gif');
+    background-size: cover;
+    border: none;
 }
 
 #progressBack {
-    width: 50%;
     position: absolute;
-    top: 36%;
-    right: 8%;
-    animation: windowBob 5s ease-in-out infinite;
-}
-
-#progressFront {
-    width: 47%;
-    position: absolute;
-    top: 36.1%;
-    right: 9.75%;
-    animation: windowBob 5s ease-in-out infinite;
+    top: 0%;
+    right: -2%;
+    width: 160px;
+    height: 20px;
+    z-index: 1;
 }
 
 #playBack {
@@ -507,7 +522,7 @@ header {
 
 #songTime {
     position: absolute;
-    top: 31%;
+    top: 31.35%;
     left: 45%;
     font-family: 'rainyhearts';
     font-size: 18px;
@@ -519,8 +534,10 @@ header {
     height: 58%;
     position: absolute;
     top: -12%;
-    left: 50%;
+    left: 60%;
     animation: windowBob 4.75s ease-in-out infinite;
+    pointer-events: none;
+    z-index: 3;
 }
 
 #djmaicon {
