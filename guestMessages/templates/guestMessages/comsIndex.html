@@ -1,0 +1,49 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+    <title>Puppet's corner</title>
+    <link rel="icon" href="{% static 'assets/images/icon.PNG' %}">
+
+    <link rel="stylesheet" href="{% static 'comsStyle.css' %}" />
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <main>
+        <div id="blinker">
+            <img src="{% static 'assets/coms/Catnotblink.svg' %}" alt="catBlinker" id="catBlinker"
+                data-noBlink-src="{% static 'assets/coms/Catnotblink.svg' %}"
+                data-blink-src="{% static 'assets/coms/CATBLINK.svg' %}">
+        </div>
+
+        <div id="title">
+            <img src="{% static 'assets/coms/works.svg' %}" alt="works" id="works">
+        </div>
+
+        <div id="icons">
+            <div style="display: flex; flex-direction: row; gap: 20px; align-items: center;">
+                <img src="{% static 'assets/coms/info.svg' %}" alt="info" id="info">
+                <div id="swirlWrapper">
+                    <img src="{% static 'assets/coms/swirl.svg' %}" alt="swirl" id="swirl">
+                </div>
+            </div>
+            <div style="display: flex; flex-direction: row; gap: 20px; align-items: center;">
+                <img src="{% static 'assets/coms/slots.svg' %}" alt="slots" id="slots">
+                <div id="swirlWrapper2">
+                    <img src="{% static 'assets/coms/swirl.svg' %}" alt="swirl2" id="swirl2">
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="{% static 'comsJs.js' %}"></script>
+</body>
+
+</html>

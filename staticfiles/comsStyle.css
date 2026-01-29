@@ -1,0 +1,28 @@
+html {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    background-color: aliceblue;
+}
+
+main {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#blinker {
+    display: flex;
+    width: 300px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#catBlinker {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    width: 300px;
+    height: auto;
+}

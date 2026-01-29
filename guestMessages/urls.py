@@ -6,7 +6,7 @@ from .views import MessageListCreateView, StatusMessageListCreateView
 
 urlpatterns = [
     path('', views.index, name='index'),
-    path('about/', views.aboutme, name='aboutme'),
+    path('commissions/', views.commissions, name='commissions'),
     path('webcomic/', views.webcomic, name='webcomic'),
     path('portfolio/', views.portfolio, name='portfolio'),
     path('links/', views.links, name='links'),

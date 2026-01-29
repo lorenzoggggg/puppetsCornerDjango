@@ -42,8 +42,8 @@ def index(request):
     statusmessages = StatusMessage.objects.all().order_by('-created_at')
     return render(request, 'guestMessages/index.html', {'messages': messages, 'statusmessages': statusmessages})
 
-def aboutme(request):
-    return render(request, 'guestMessages/aboutmeIndex.html')
+def commissions(request):
+    return render(request, 'guestMessages/comsIndex.html')
 
 def webcomic(request):
     return render(request, 'guestMessages/webcomicIndex.html')

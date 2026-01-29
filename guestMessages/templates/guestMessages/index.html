@@ -19,7 +19,7 @@
 
     <nav id="navBar">
         <img src="{% static 'assets/images/navbar.svg' %}" alt="navbar" id="nav">
-        <p id="comsTxt">commissions</p>
+        <a href="{% url 'commissions' %}" id="comsTxt">commissions</a>
         <a href="https://puppetizer.bigcartel.com/" id="shopTxt">shop</a>
         <p id="portTxt">portfolio</p>
         <p id="comicTxt">webcomic</p>
@@ -29,25 +29,6 @@
     <header id="header">
         <img src="{% static 'assets/images/PUPPETIZER.svg' %}" id="logoFloat" onclick="logoClick()">
     </header>
-    <nav id="navBar">
-        <!--<div class="image-container">
-            <a href="{% url 'aboutme' %}">
-                <img src="{% static 'assets/images/buttonPink.png' %}" alt="Button 1">
-            </a>
-            <a href="https://puppetizer.bigcartel.com/">
-                <img src="{% static 'assets/images/buttonOrange.png' %}" alt="Button 2">
-            </a>
-            <a href="{% url 'webcomic' %}">
-                <img src="{% static 'assets/images/buttonBlue.png' %}" alt="Button 3">
-            </a>
-            <a href="{% url 'portfolio' %}">
-                <img src="{% static 'assets/images/buttonRed1.png' %}" alt="Button 4">
-            </a>
-            <a href="{% url 'links' %}">
-                <img src="{% static 'assets/images/buttonPurple.png' %}" alt="Button 5">
-            </a>
-        </div>-->
-    </nav>
 
     <main>
         <!--<div id="gifContainer">
